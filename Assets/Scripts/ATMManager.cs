@@ -8,12 +8,7 @@ using TMPro;
 
 public class ATMManager : MonoBehaviour
 {
-    //public Text textDesposit;
-    //public Text textWithdrawal;
-    //public InputField InputText_Desposit;
-    //public InputField InputText_Withdrawal;
     
-
     public void SetText()
     {
         UserInfo.Instance.UserWallet.text = UserInfo.Instance.userWallet.ToString();
@@ -102,30 +97,5 @@ public class ATMManager : MonoBehaviour
         }
     }
 
-    //public void Input()
-    //{
-    //    if (UserInfo.Instance.userWallet > int.Parse(textDesposit.text))
-    //    {
-    //        UserInfo.Instance.userCash += int.Parse(textDesposit.text);
-    //        UserInfo.Instance.userWallet -= int.Parse(textDesposit.text);
-    //        SetText();
-    //    }
-    //    else
-    //    {
-    //        GameObject.Find("Main").transform.Find("Error").gameObject.SetActive(true);
-    //    }
-    //}
-    //public void Output()
-    //{
-    //    if (UserInfo.Instance.userCash > int.Parse(textWithdrawal.text))
-    //    {
-    //        UserInfo.Instance.userCash -= int.Parse(textWithdrawal.text);
-    //        UserInfo.Instance.userWallet += int.Parse(textWithdrawal.text);
-    //        SetText();
-    //    }
-    //    else
-    //    {
-    //        GameObject.Find("Main").transform.Find("Error").gameObject.SetActive(true);
-    //    }
-    //}
+  
 }

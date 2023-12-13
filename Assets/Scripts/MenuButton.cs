@@ -5,16 +5,16 @@ using UnityEngine;
 public class MenuButton : MonoBehaviour
 {
 
-    public void DespositMenu()
+    public void DepositMenu()
     {
         GameObject.Find("Main").transform.Find("Menu").gameObject.SetActive(false);
-        GameObject.Find("Main").transform.Find("DespositMenu").gameObject.SetActive(true);
+        GameObject.Find("Main").transform.Find("DepositMenu").gameObject.SetActive(true);
 
     }
 
-    public void DespositMenuCancel()
+    public void DepositMenuCancel()
     {
-        GameObject.Find("Main").transform.Find("DespositMenu").gameObject.SetActive(false);
+        GameObject.Find("Main").transform.Find("DepositMenu").gameObject.SetActive(false);
         GameObject.Find("Main").transform.Find("Menu").gameObject.SetActive(true);
     }
 

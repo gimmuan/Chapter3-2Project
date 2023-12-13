@@ -1025,10 +1025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ce01756e7d710469b62974847271c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDesposit: {fileID: 0}
-  textWithdrawal: {fileID: 0}
-  InputText_Desposit: {fileID: 0}
-  InputText_Withdrawal: {fileID: 0}
 --- !u!1 &364478067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,10 +1439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ce01756e7d710469b62974847271c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDesposit: {fileID: 0}
-  textWithdrawal: {fileID: 0}
-  InputText_Desposit: {fileID: 0}
-  InputText_Withdrawal: {fileID: 0}
 --- !u!1 &469710059
 GameObject:
   m_ObjectHideFlags: 0
@@ -2430,10 +2422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ce01756e7d710469b62974847271c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDesposit: {fileID: 0}
-  textWithdrawal: {fileID: 0}
-  InputText_Desposit: {fileID: 0}
-  InputText_Withdrawal: {fileID: 0}
 --- !u!1 &688276709
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,6 +3075,7 @@ GameObject:
   - component: {fileID: 1044665071}
   - component: {fileID: 1044665070}
   - component: {fileID: 1044665069}
+  - component: {fileID: 1044665072}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3158,9 +3147,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1613414076}
-        m_TargetAssemblyTypeName: ATMManager, Assembly-CSharp
-        m_MethodName: Output
+      - m_Target: {fileID: 1044665072}
+        m_TargetAssemblyTypeName: Bank, Assembly-CSharp
+        m_MethodName: TextWithdrawal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3208,6 +3197,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044665067}
   m_CullTransparentMesh: 1
+--- !u!114 &1044665072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044665067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad07f58690315d4a9d7f18ae3332fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1096883282
 GameObject:
   m_ObjectHideFlags: 0
@@ -3488,10 +3489,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ce01756e7d710469b62974847271c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDesposit: {fileID: 0}
-  textWithdrawal: {fileID: 0}
-  InputText_Desposit: {fileID: 0}
-  InputText_Withdrawal: {fileID: 0}
 --- !u!1 &1262254341
 GameObject:
   m_ObjectHideFlags: 0
@@ -3669,9 +3666,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1613414076}
-        m_TargetAssemblyTypeName: ATMManager, Assembly-CSharp
-        m_MethodName: Input
+      - m_Target: {fileID: 1613414077}
+        m_TargetAssemblyTypeName: Bank, Assembly-CSharp
+        m_MethodName: TextDeposit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4183,7 +4180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Desposit
+  m_text: Deposit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -4861,6 +4858,7 @@ GameObject:
   - component: {fileID: 1613414073}
   - component: {fileID: 1613414072}
   - component: {fileID: 1613414076}
+  - component: {fileID: 1613414077}
   m_Layer: 5
   m_Name: Main
   m_TagString: Untagged
@@ -4969,10 +4967,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ce01756e7d710469b62974847271c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDesposit: {fileID: 0}
-  textWithdrawal: {fileID: 0}
-  InputText_Desposit: {fileID: 0}
-  InputText_Withdrawal: {fileID: 0}
+--- !u!114 &1613414077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613414071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad07f58690315d4a9d7f18ae3332fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1636734165
 GameObject:
   m_ObjectHideFlags: 0
@@ -4985,6 +4991,7 @@ GameObject:
   - component: {fileID: 1636734169}
   - component: {fileID: 1636734168}
   - component: {fileID: 1636734167}
+  - component: {fileID: 1636734170}
   m_Layer: 5
   m_Name: InputField (TMP) (1)
   m_TagString: Untagged
@@ -5074,9 +5081,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1613414076}
-        m_TargetAssemblyTypeName: ATMManager, Assembly-CSharp
-        m_MethodName: Output
+      - m_Target: {fileID: 1613414077}
+        m_TargetAssemblyTypeName: Bank, Assembly-CSharp
+        m_MethodName: TextWithdrawal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5160,6 +5167,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636734165}
   m_CullTransparentMesh: 1
+--- !u!114 &1636734170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636734165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad07f58690315d4a9d7f18ae3332fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1676455053
 GameObject:
   m_ObjectHideFlags: 0
@@ -5438,9 +5457,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1613414076}
-        m_TargetAssemblyTypeName: ATMManager, Assembly-CSharp
-        m_MethodName: Input
+      - m_Target: {fileID: 1704868473}
+        m_TargetAssemblyTypeName: Bank, Assembly-CSharp
+        m_MethodName: TextDeposit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5500,10 +5519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad07f58690315d4a9d7f18ae3332fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputField_Add: {fileID: 0}
-  InputField_Subtract: {fileID: 0}
-  Button_Add: {fileID: 0}
-  Button_Subtract: {fileID: 0}
 --- !u!1 &1711937259
 GameObject:
   m_ObjectHideFlags: 0
@@ -5652,7 +5667,7 @@ GameObject:
   - component: {fileID: 1724241105}
   - component: {fileID: 1724241108}
   m_Layer: 5
-  m_Name: Desposit
+  m_Name: Deposit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5724,7 +5739,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1724241108}
         m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
-        m_MethodName: DespositMenu
+        m_MethodName: DepositMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5930,10 +5945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ce01756e7d710469b62974847271c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDesposit: {fileID: 0}
-  textWithdrawal: {fileID: 0}
-  InputText_Desposit: {fileID: 0}
-  InputText_Withdrawal: {fileID: 0}
 --- !u!1 &1897277567
 GameObject:
   m_ObjectHideFlags: 0
@@ -6020,7 +6031,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1897277572}
         m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
-        m_MethodName: DespositMenuCancel
+        m_MethodName: DepositMenuCancel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6301,10 +6312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ce01756e7d710469b62974847271c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDesposit: {fileID: 0}
-  textWithdrawal: {fileID: 0}
-  InputText_Desposit: {fileID: 0}
-  InputText_Withdrawal: {fileID: 0}
 --- !u!1 &1980420269
 GameObject:
   m_ObjectHideFlags: 0
@@ -6785,7 +6792,7 @@ GameObject:
   - component: {fileID: 2073440544}
   - component: {fileID: 2073440543}
   m_Layer: 5
-  m_Name: DespositMenu
+  m_Name: DepositMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
