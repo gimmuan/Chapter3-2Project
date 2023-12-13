@@ -29,6 +29,13 @@ public class Bank : MonoBehaviour
         }
     }
 
+    public void ErrorCheck()
+    {
+        Debug.Log(UserInfo.Instance.userWallet);
+        Debug.Log(UserInfo.Instance.userCash);
+        Debug.Log(deposit_text);
+    }
+
     public void TextWithdrawal()
     {
         if (UserInfo.Instance.userCash < int.Parse(withdrawal_text.text))
