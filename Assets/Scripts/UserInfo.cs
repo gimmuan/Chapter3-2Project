@@ -8,16 +8,15 @@ public class UserInfo : MonoBehaviour
 {
     public static UserInfo Instance { get; private set; }
 
-    public int userWallet;
-    public int userCash;
+    public UserData userData;
 
     public Text UserWallet;
     public Text UserCash;
 
     private void Start()
     {
-        UserCash.text = userCash.ToString();
-        UserWallet.text = userWallet.ToString();    
+        UserCash.text = FormatNumber(userData.cash);
+        UserWallet.text = FormatNumber(userData.wallet);   
     }
 
     private void Awake()
@@ -33,4 +32,8 @@ public class UserInfo : MonoBehaviour
 
     }
     
+    string FormatNumber(int num)
+    {
+        return string.Format("{0:N0}", num);
+    }
 }

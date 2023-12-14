@@ -9,7 +9,6 @@ public class MenuButton : MonoBehaviour
     {
         GameObject.Find("Main").transform.Find("Menu").gameObject.SetActive(false);
         GameObject.Find("Main").transform.Find("DepositMenu").gameObject.SetActive(true);
-
     }
 
     public void DepositMenuCancel()

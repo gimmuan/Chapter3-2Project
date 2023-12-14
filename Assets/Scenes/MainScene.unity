@@ -420,8 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115f7bbf8d279d4458b4cf9904ba13e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userWallet: 100000
-  userCash: 50000
+  userData: {fileID: 11400000, guid: 79172c1a4d6426742ae0ed8bfa402a0a, type: 2}
   UserWallet: {fileID: 2100480713}
   UserCash: {fileID: 1352954011}
 --- !u!4 &24207184
@@ -963,14 +962,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 299520589}
+      - m_Target: {fileID: 1613414076}
         m_TargetAssemblyTypeName: ATMManager, Assembly-CSharp
-        m_MethodName: SubtractCash3
-        m_Mode: 1
+        m_MethodName: SubtractCash
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 30000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1377,14 +1376,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 469367477}
+      - m_Target: {fileID: 1613414076}
         m_TargetAssemblyTypeName: ATMManager, Assembly-CSharp
-        m_MethodName: AddCash3
-        m_Mode: 1
+        m_MethodName: AddCash
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 30000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2360,14 +2359,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 678928799}
+      - m_Target: {fileID: 1613414076}
         m_TargetAssemblyTypeName: ATMManager, Assembly-CSharp
-        m_MethodName: AddCash1
-        m_Mode: 1
+        m_MethodName: AddCash
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3075,7 +3074,6 @@ GameObject:
   - component: {fileID: 1044665071}
   - component: {fileID: 1044665070}
   - component: {fileID: 1044665069}
-  - component: {fileID: 1044665072}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3147,7 +3145,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1044665072}
+      - m_Target: {fileID: 1613414077}
         m_TargetAssemblyTypeName: Bank, Assembly-CSharp
         m_MethodName: TextWithdrawal
         m_Mode: 1
@@ -3197,18 +3195,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044665067}
   m_CullTransparentMesh: 1
---- !u!114 &1044665072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044665067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad07f58690315d4a9d7f18ae3332fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1096883282
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,14 +3413,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1098670655}
+      - m_Target: {fileID: 1613414076}
         m_TargetAssemblyTypeName: ATMManager, Assembly-CSharp
-        m_MethodName: AddCash5
-        m_Mode: 1
+        m_MethodName: AddCash
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 50000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4979,6 +4965,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad07f58690315d4a9d7f18ae3332fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deposit_text: {fileID: 1336710241}
+  withdrawal_text: {fileID: 1636734167}
 --- !u!1 &1636734165
 GameObject:
   m_ObjectHideFlags: 0
@@ -5372,7 +5360,6 @@ GameObject:
   - component: {fileID: 1704868472}
   - component: {fileID: 1704868471}
   - component: {fileID: 1704868470}
-  - component: {fileID: 1704868473}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -5444,7 +5431,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1704868473}
+      - m_Target: {fileID: 1613414077}
         m_TargetAssemblyTypeName: Bank, Assembly-CSharp
         m_MethodName: TextDeposit
         m_Mode: 1
@@ -5494,18 +5481,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704868468}
   m_CullTransparentMesh: 1
---- !u!114 &1704868473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704868468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad07f58690315d4a9d7f18ae3332fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1711937259
 GameObject:
   m_ObjectHideFlags: 0
@@ -5870,14 +5845,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1775112673}
+      - m_Target: {fileID: 1613414076}
         m_TargetAssemblyTypeName: ATMManager, Assembly-CSharp
-        m_MethodName: SubtractCash1
-        m_Mode: 1
+        m_MethodName: SubtractCash
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6237,14 +6212,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1938200613}
+      - m_Target: {fileID: 1613414076}
         m_TargetAssemblyTypeName: ATMManager, Assembly-CSharp
-        m_MethodName: SubtractCash5
-        m_Mode: 1
+        m_MethodName: SubtractCash
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 50000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

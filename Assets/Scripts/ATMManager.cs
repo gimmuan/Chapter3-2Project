@@ -11,91 +11,37 @@ public class ATMManager : MonoBehaviour
     
     public void SetText()
     {
-        UserInfo.Instance.UserWallet.text = UserInfo.Instance.userWallet.ToString();
-        UserInfo.Instance.UserCash.text = UserInfo.Instance.userCash.ToString();
+        UserInfo.Instance.UserWallet.text = UserInfo.Instance.userData.wallet.ToString();
+        UserInfo.Instance.UserCash.text = UserInfo.Instance.userData.cash.ToString();
     }
 
-    public void AddCash1()
+    public void AddCash(int money)
     {
-        if (UserInfo.Instance.userWallet < 10000)
+        if (UserInfo.Instance.userData.wallet < money)
         {
             GameObject.Find("Main").transform.Find("Error").gameObject.SetActive(true);
         }
         else
         {
-            UserInfo.Instance.userWallet -= 10000;
-            UserInfo.Instance.userCash += 10000;
+            UserInfo.Instance.userData.wallet -= money;
+            UserInfo.Instance.userData.cash += money;
             SetText();
         }
         
     }
-    public void AddCash3()
+    
+    public void SubtractCash(int money)
     {
-        if (UserInfo.Instance.userWallet < 30000)
+        if (UserInfo.Instance.userData.cash < money)
         {
             GameObject.Find("Main").transform.Find("Error").gameObject.SetActive(true);
         }
         else
         {
-            UserInfo.Instance.userWallet -= 30000;
-            UserInfo.Instance.userCash += 30000;
-            SetText();
-        }
-    }
-    public void AddCash5()
-    {
-        if (UserInfo.Instance.userWallet < 50000)
-        {
-            GameObject.Find("Main").transform.Find("Error").gameObject.SetActive(true);
-        }
-        else
-        {
-            UserInfo.Instance.userWallet -= 50000;
-            UserInfo.Instance.userCash += 50000;
-            SetText();
-        }
-    }
-
-    public void SubtractCash1()
-    {
-        if (UserInfo.Instance.userCash < 10000)
-        {
-            GameObject.Find("Main").transform.Find("Error").gameObject.SetActive(true);
-        }
-        else
-        {
-            UserInfo.Instance.userWallet += 10000;
-            UserInfo.Instance.userCash -= 10000;
+            UserInfo.Instance.userData.wallet += money;
+            UserInfo.Instance.userData.cash -= money;
             SetText();
         }
 
     }
-    public void SubtractCash3()
-    {
-        if (UserInfo.Instance.userCash < 30000)
-        {
-            GameObject.Find("Main").transform.Find("Error").gameObject.SetActive(true);
-        }
-        else
-        {
-            UserInfo.Instance.userWallet += 30000;
-            UserInfo.Instance.userCash -= 30000;
-            SetText();
-        }
-    }
-    public void SubtractCash5()
-    {
-        if (UserInfo.Instance.userCash < 50000)
-        {
-            GameObject.Find("Main").transform.Find("Error").gameObject.SetActive(true);
-        }
-        else
-        {
-            UserInfo.Instance.userWallet += 50000;
-            UserInfo.Instance.userCash -= 50000;
-            SetText();
-        }
-    }
-
-  
 }
