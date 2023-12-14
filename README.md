@@ -11,3 +11,7 @@ ATM 어플(?) 제작하기
 
 pulic으로 드래그 앤 드롭으로 Inputfield를 부여할려고 했는데 드래그 앤 드롭이 안됨
 그래서 public을 포기하고 Find,GetComponet로 바꿔서 진행해도 null값이 뜨며 오류
+
+
+-오류수정-
+Textmeshpro는 inputField가 아닌 TMP_InputField를 써야함
